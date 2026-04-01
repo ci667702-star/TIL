@@ -29,8 +29,8 @@ PnP| 지원 수단 없음 | 지원 수단 있음
 
 
 ## 2. ARP/RARP
-**ARD**<br>
-Adress Resolution Protocol의 약자로 네트워크 계층의 주소 결정 프로토콜이다. 호스트의 IP주소를 호스트와 연결된 네트워크 접속 장치의 물리적 주소로 바꾼다.
+**ARO**<br>
+Address Resolution Protocol의 약자로 네트워크 계층의 주소 결정 프로토콜이다. 호스트의 IP주소를 호스트와 연결된 네트워크 접속 장치의 물리적 주소로 바꾼다.
 
 **ARP의 동작 방식**
 - ARP는 브로드캐스트로 동작한다.
@@ -39,7 +39,7 @@ Adress Resolution Protocol의 약자로 네트워크 계층의 주소 결정 프
 네트워크망 내의 모든 host에게 브로드캐스트로 패킷을 보내면 목적지가 해당 패킷에 자신의 MAC 주소를 실어서 유니캐스트로 응답하고 ARP는 이 정보를 테이블에 저장한다.
 
 **RARP** <br>
-Reverse Adress Resolution Protocol의 약자이다.
+Reverse Address Resolution Protocol의 약자이다.
 ARP의 반대로 동작하는 것인데 ARP 프로토콜 구조는 같지만 필드의 내용이 다르고 원래 목적과 반대로 사용된다.(물리적 주소를 IP주소로 변환한다.)
 
 - IP주소가 정해져 있지 않은 단말이 IP 할당을 요청할 떄 사용한다.
