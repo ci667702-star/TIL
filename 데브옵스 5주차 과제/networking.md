@@ -104,16 +104,15 @@ LAN은 소규모 네트워킹에 최적화되어 있다.
 6. 협업 생산성 향상
     - LAN을 통해 여러 사용자가 공유 파일 및 애플리케이션에서 작업할 수 있어 협업의 생산성이 향상된다.
 
-**LAN과 WAN의 차이점**
-WAS은 연결된 LAN의 모음이다. 이는 로컬 네트워크의 광범위한 네트워크이다. WAN은 주어진 영역으로 제한되지 않는다. LAN은 WAN에 비해 규모는 작지만, 훨씬 빠른 전송 속도를 자랑한다.
-
-
 ## 3. WAN
 
+
+**LAN과 WAN의 차이점**<br>
+WAN은 연결된 LAN의 모음이다. 이는 로컬 네트워크의 광범위한 네트워크이다. WAN은 주어진 영역으로 제한되지 않는다. LAN은 WAN에 비해 규모는 작지만, 훨씬 빠른 전송 속도를 자랑한다.
 ## 4. 이더넷
 
 ## 5. CSMA/CD
-Carrier Sense Multiple Access/Collision Detetion의 약자로,
+Carrier Sense Multiple Access/Collision Detetion의 약자로, 
 
 ## 6. 토큰링
 
@@ -127,7 +126,15 @@ Carrier Sense Multiple Access/Collision Detetion의 약자로,
 - `서브넷팅(Subnetting): 네트워크를 분할하는 것을 의미한다. 이것은 서브넷 마스크(Subnet Mask)를 통해서 가능하다.`
 
 ## 8. MAC
+MAC(Media Access Control) address는 네트워크 어댑터(랜카드, NIC)의 물리적 주소를 말하며, 내 PC의 유일한 고유의 주소이다. 물리적 주소 또는 하드웨어 주소라고도 한다. 하드웨어 제조업체를 식별하고 네트워크 세그먼트의 장치 간 네트워크 통신에 사용된다.
 
+MAC 주소의 처음 3쌍은 IEEE(Institute of Electrical and Electronics Engineers)에서 할당하고 NIC 제조업체를 식별한다. 이 번호가 OUI() 이ㅏㄷ. 모든 OUI는 IEEE에 의해 제조업체에 등록 및 할당된다.
+
+**IP 주소와의 차이점**
+구분 |MAC 주소 | IP 주소
+:--:|:--:|:--:
+계층 | 2계층 주소 | 3계층 주소
+변경 여부 | 변경할 수 없음 | 변경 가능
 ## 9. DNS
 
 ## 10. cloud 컴퓨팅

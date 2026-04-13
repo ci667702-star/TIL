@@ -176,7 +176,7 @@ HTTP 상태코드|사유구절|설명
         해당 request가 전송되는 URI
         3. HTTP Version<br>
         말 그대로 사용되는 HTTP 버전.
-- Headres
+- Header
     - 아래 참조
 - Body
     - 아래 참조
