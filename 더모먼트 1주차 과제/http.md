@@ -2,7 +2,7 @@
 
 ## HTTP(HyperText Transfer Protocol)의 개념과 역할
 
-**HTTP의 의미**
+**HTTP의 의미**<br>
 HTTP는 월드 와이드 웹(World Wide Web, WWW)은 통신하는 데 사용하는 프로토콜이다. HTTP는 다양한 종류의 데이터를 전송할 수 있도록 설계되었다. 일반적으로 TCP/IP 통신 프로토콜을 기반으로 동작한다.
 
 **특징**
