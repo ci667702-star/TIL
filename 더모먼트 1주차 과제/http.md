@@ -3,13 +3,14 @@
 ## HTTP(HyperText Transfer Protocol)의 개념과 역할
 
 **HTTP의 의미**<br>
-HTTP는 월드 와이드 웹(World Wide Web, WWW)은 통신하는 데 사용하는 프로토콜이다. HTTP는 다양한 종류의 데이터를 전송할 수 있도록 설계되었다. 일반적으로 TCP/IP 통신 프로토콜을 기반으로 동작한다.
+HTTP는 월드 와이드 웹(World Wide Web, WWW)에서 통신하는 데 사용하는 프로토콜이다. HTTP는 다양한 종류의 데이터를 전송할 수 있도록 설계되었다. 일반적으로 TCP/IP 통신 프로토콜을 기반으로 동작한다.
 
 **특징**
 - 클라이언트와 서버간의 요청과 응답을 통해 작동한다.
 - 다양한 종류의 데이터(html, css, javascript, png, gif 등)를 전송할 수 있도록 설계된 프로토콜이다.
 - 웹페이지에 포함된 각 구성 요소(이미지, 텍스트, html, 영상 등)는 대부분 개별적인 HTTP 요청을 통해 서버로부터 요청된다.
 - 일반적으로 TCP/IP 프로토콜을 기반으로 동작한다.
+- 비연결성<==설명덧붙이기>
 
 **장점**
 1. 서버 확장성이 높다
@@ -90,13 +91,16 @@ GET 메서드가 서버로부터 문서를 읽어 들이는데 반해 PUT 메서
 **DELETE**<br>
 서버에게 요청 URL로 지정한 리소스를 삭제할 것을 요청한다. 그러나 클라이언트는 삭제가 수행되는 것을 보지 못한다. 왜냐하면 HTTP 명세는 서버가 클라이언트에게 알리지 않고 요청을 무시하는 것을 허용하기 때문이다.
 
+**PATCH**<br>
+클라이언트의 요청에 따라 리소스를 수정하고 부분 업데이트를 한다. 일반적으로 PATCH 요청은 변경이 필요한 필드만 요청 본문으로 보내고, 변경하고 싶지 않은 필드는 요청 본문에서 생략한다.
 
 메서드 | 설명 | 메세지 본문이 있는가? | 멱등성을 보장하는가?
-:-- | :-- | :--|:--
+:-- | :-- | :-- | :--
 GET | 서버에서 어떤 문서를 가져온다. | 없음|O
 POST | 서버가 처리해야 할 데이터를 보낸다. | 있음|X
 PUT | 서버에 요청 메세지의 본문을 저장한다. | 있음|O
 DELETE | 서버에서 문서를 제거한다. | 없음 |O
+PATCH | 리소스를 부분 변경한다. | 있음 | X
 
 ## HTTP 상태 코드
 **HTTP 상태 코드의 의미**<br>
@@ -167,6 +171,15 @@ HTTP 상태코드|사유구절|설명
 
 ## HTTP 요청과 응답 구조
 **HTTP 요청(Request)**
+
+    GET / HTTP/1.1
+    Host: www.naver.com:443
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    sec-ch-ua: "Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"
+    sec-ch-ua-mobile: ?0
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+
 - start line
     - 말 그대로 HTTP request의 첫 라인이다. 
     - start line 또한 3부분으로 구성되어 있다.
@@ -181,7 +194,22 @@ HTTP 상태코드|사유구절|설명
 - Body
     - 아래 참조
 
+
 **HTTP 응답(Response)**
+
+    HTTP/1.1 200
+    cache-control: no-cache, no-store, must-revalidate
+    content-encoding: gzip
+    content-type: text/html; charset=UTF-8
+    date: Wed, 25 Aug 2021 02:42:02 GMT
+    p3p: CP="CAO DSP CURa ADMa TAIa PSAa OUR LAW STP PHY ONL UNI PUR FIN COM NAV INT DEM STA PRE"
+    pragma: no-cache
+    referrer-policy: unsafe-url
+    server: NWS
+    strict-transport-security: max-age=63072000; includeSubdomains
+    x-frame-options: DENY
+    x-xss-protection: 1; mode=block
+
 - Status Line
     - Response의 상태를 간략하게 나타내주는 부분
         - HTTP 버전
