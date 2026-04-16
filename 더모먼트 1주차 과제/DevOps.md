@@ -23,19 +23,25 @@
 명령어 | 설명
 :--:|:--
 `docker run [옵션] <이미지명>` | 새 컨테이너 생성 및 실행
-`docker build [도커 파일 경로]` | 사용자가 작성한 Dockerfile의 지침에 따라 새로운 도커 이미지를 생성하는 데 사용
+`docker build [옵션] [도커 파일 경로]` | 사용자가 작성한 Dockerfile의 지침에 따라 새로운 도커 이미지를 생성하는 데 사용
 `docker ps` | 실행중인 컨테이너 목록 표시
 `docker pull[옵션] <이름> [TAG/@DIGEST]` | Docker Hub에서 <이름>라는 이름의 이미지를 다운로드
 `docker rm [컨테이너 명]` | 컨테이너 삭제
+`docker stop <이름>` | Docker Container 실행 중지
 
 <br>
 
+Docker build 예시
+
+    $ docker build -t my_image . 
+
+- 현재 디렉토리의 Dockerfile을 찾아서 my_image로 빌드
 
 Docker pull 예시
 
-    docker pull ubuntu:24.04
+    $ docker pull ubuntu:24.04
 
-=> Ubuntu 24.04 버전의 이미지를 다운로드
+- Ubuntu 24.04 버전의 이미지를 다운로드
 
 - `TAG: 이미지의 특정 버전이나 레이블을 나타냄. 생략하면 기본적으로 latest 태그를 다운로드 한다.`
 - `DIGEST: 이미지의 고유한 식별자를 사용하여 특정 버전을 나타낸다.`
@@ -120,7 +126,6 @@ tmpfs mount | 임시 데이터이며 호스트의 메모리에서만 지속됨.<
 저장 위치 | Docker 영역(/var/lib/docker/volumes/)|호스트 파일 시스템 어디든
 이식성 | 높음 | 호스트 경로에 의존
 권장 사항|데이터 영속화 | 개발 시 소스 코드 마운트
-
 
 ## 도커 네트워크
 Docker 컨테이너 간의 통신을 관리하고 격리하기 위한 기능을 제공하는 것이다. 컨테이너화된 애플리케이션은 여러개의 컨테이너로 구성될 수 있는데, 이들 컨테이너가 서로 통신하고 데이터를 주고 받아야 할 경우가 있다.
