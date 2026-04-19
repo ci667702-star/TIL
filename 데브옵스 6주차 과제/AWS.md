@@ -80,7 +80,10 @@ https://www.ibm.com/kr-ko/think/topics/identity-access-management#1509394340
 # **Auto Scaling**
 
 # **ELB**
+ELB(Elastic Load Balancer)는 AWS의 로드 밸런서 서비스이다. 로드밸런서의 주요 기능은 서버 부하 분산, 즉 로드밸런싱으로 특정 서버에 부하가 몰리지 않도록 적절히 분산하는 것이다. EC2 뿐만 아니라 ECS의 컨테이너, Lamva 등을 상대로 부하분산을 실시한다.
 
+**기본 구성**
+AWS의 사용자 정의 네트워크인 VPC에 탑재되며, 사용자의 요청ㅇ르 받고 이를 VPC 내의 리소스등에 적절히 부하 분산한다. 그렇기에 ELV는 외부의 요청을 받아들이는 리스너(Listener)와 요청을 분산/전달할 리소스의 집합 대상인 대상 그룹(Target Group)으로 구성되며 ELB는 다수의 리스너와 대상 그룹을 거느릴 수 있다.
 # RDS
 
 # **CloudWatch**
